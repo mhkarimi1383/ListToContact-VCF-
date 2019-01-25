@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +53,9 @@ namespace List_to_Contact
             if (folderBrowserDialog1DialogResult == DialogResult.OK)
             {
                 pathToSave = folderBrowserDialog1.SelectedPath;
+                folderBrowserDialog1.Dispose();
+                folderBrowserDialog1.Reset();
+                
             }
             else
             {
@@ -142,15 +145,45 @@ namespace List_to_Contact
         {
             int counter=0;
             int countToFinish = listBox1.Items.Count;
+            StreamWriter contactFileStreamWriter;
             while (counter < countToFinish)
             {
-                StreamWriter contactFileStreamWriter = new StreamWriter($@"{pathToSave}\{counter}.vcf");
-                contactFileStreamWriter.AutoFlush = true;
-                contactFileStreamWriter.Write(VcfTemplate
+                contactFileStreamWriter = new StreamWriter($@"{pathToSave}\{counter}.vcf");
+
+                if (listBox1.Items.Count == listBox2.Items.Count && listBox3.Items.Count == listBox2.Items.Count)
+                {
+                    contactFileStreamWriter.Write(VcfTemplate
                     .Replace("<Number>", listBox1.Items[counter].ToString())
                     .Replace("<FirstName>", listBox2.Items[counter].ToString())
                     .Replace("<LastName>", listBox3.Items[counter].ToString()));
-                contactFileStreamWriter.Close();
+                    contactFileStreamWriter.Flush();
+                    contactFileStreamWriter.Close();
+                    counter++;
+                    continue;
+                }
+                else if (listBox1.Items.Count == listBox2.Items.Count)
+                {
+                    contactFileStreamWriter.Write(VcfTemplate
+                    .Replace("<Number>", listBox1.Items[counter].ToString())
+                    .Replace("<FirstName>", listBox2.Items[counter].ToString())
+                    .Replace("<LastName>", string.Empty));
+                    contactFileStreamWriter.Flush();
+                    contactFileStreamWriter.Close();
+                    counter++;
+                    continue;
+                }
+                else if (listBox1.Items.Count != listBox2.Items.Count)
+                {
+                    contactFileStreamWriter.Write(VcfTemplate
+                    .Replace("<Number>", listBox1.Items[counter].ToString())
+                    .Replace("<FirstName>", listBox1.Items[counter].ToString())
+                    .Replace("<LastName>", string.Empty));
+                    contactFileStreamWriter.Flush();
+                    contactFileStreamWriter.Close();
+                    counter++;
+                    continue;
+                }
+                
             }
         }
     }
