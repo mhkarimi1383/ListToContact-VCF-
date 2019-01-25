@@ -32,4 +32,4 @@ and go to that directory with `cd ListToContact-VCF-`
 or
 Open the `ListtoContact.sln` with Visual Studio
 
-#### you need .NET Framework 4.7.2 for build that  
+#### Important: you need .NET Framework 4.7.2 for build that  
