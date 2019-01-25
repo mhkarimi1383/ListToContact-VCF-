@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:3.0
+N:<LastName>;<FirstName>;
+FN:<FirstName> <LastName>
+TEL;TYPE=CELL:<Number>
+END:VCARD
