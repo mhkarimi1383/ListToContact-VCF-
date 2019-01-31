@@ -35,6 +35,6 @@ and
 ### 2. build-up
 `msbuild ListtoContact.sln`
 or
-Open the `ListtoContact.sln` with Visual Studio
+Open the `ListtoContact.sln` with Visual Studio (2019 and 2017 are recommended)
 
 #### Important: you need .NET Framework 4.7.2 for build that  
