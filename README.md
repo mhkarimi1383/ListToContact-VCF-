@@ -30,7 +30,7 @@ and go to that directory with `cd ListToContact-VCF-`
 ### 2. Get Template Ready
 `mkdir .\bin\debug`
 and
-`copy VcfTemplate.txt .\bin\Debug
+`copy VcfTemplate.txt .\bin\Debug`
 
 ### 2. build-up
 `msbuild ListtoContact.sln`
