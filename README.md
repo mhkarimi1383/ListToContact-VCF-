@@ -32,7 +32,7 @@ and go to that directory with `cd ListToContact-VCF-`
 and
 `copy VcfTemplate.txt .\bin\Debug`
 
-### 2. build-up
+### 3. build-up
 `msbuild ListtoContact.sln`
 or
 Open the `ListtoContact.sln` with Visual Studio (2019 and 2017 are recommended)
