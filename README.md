@@ -22,10 +22,13 @@ Select a text file with *.txt type be sure they are line-by-line
 
 #### Option two using wget and winrar
 `wget https://github.com/mhkarimi1383/ListToContact-VCF-/archive/master.zip`
+
 or
+
 `curl https://github.com/mhkarimi1383/ListToContact-VCF-/archive/master.zip`
 then extract files to a directory with winrar
-and go to that directory with `cd ListToContact-VCF-`
+and go to that directory with
+`cd ListToContact-VCF-`
 
 ### 2. Get Template Ready
 `mkdir .\bin\debug`
