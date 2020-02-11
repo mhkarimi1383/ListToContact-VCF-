@@ -1,5 +1,5 @@
 # List To Contact(*.VCF)
-This Project convert number list to vcf files (First Names list and Family Names list are optical).
+This Project convert number list to vcf files (First Names list and Family Names list are optional).
 
 ## How to use
 ### 1. Select Number List
