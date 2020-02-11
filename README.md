@@ -41,3 +41,6 @@ or
 Open the `ListtoContact.sln` with Visual Studio (2019 and 2017 are recommended)
 
 #### Important: you need .NET Framework 4.7.2 for build that  
+
+## TODO
+- [ ] make a better gitignore
